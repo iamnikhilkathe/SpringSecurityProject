@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
+        <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Welcome Back</h2>
+
+        <form method="POST" action="/loginProject" class="space-y-5">
+            <div>
+                <label class="block text-sm font-medium text-gray-600">Username</label>
+                <input name="username" type="text" required class="mt-1 w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500" />
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-600">Password</label>
+                <input name="password" type="password" required class="mt-1 w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500" />
+            </div>
+
+            <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition">Login</button>
+        </form>
+
+        <div class="mt-6 text-center">
+            <p class="text-sm text-gray-500">or</p>
+            <a href="/oauth2/authorization/google" class="mt-4 inline-flex items-center justify-center gap-2 w-full bg-red-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-600 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21.35 11.1H12v2.9h5.36C16.79 17.2 14.62 18.5 12 18.5c-3.18 0-5.88-2.4-6.59-5.5H3.05v3.45A9.994 9.994 0 0012 22c5.52 0 10-4.48 10-10 0-.68-.07-1.34-.2-1.9z"/>
+                    <path d="M3.05 12.5A9.985 9.985 0 0112 2c2.66 0 5.09 1.08 6.84 2.84L15.83 8.5C14.75 7.46 13.21 6.9 12 6.9c-2.62 0-4.79 1.8-5.58 4.2H3.05z"/>
+                </svg>
+                Sign in with Google
+            </a>
+
+            <a href="/oauth2/authorization/github" class="mt-4 inline-flex items-center justify-center gap-2 w-full bg-gray-800 text-white font-semibold py-2 px-4 rounded-lg hover:bg-gray-900 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2a10 10 0 00-3.16 19.48c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.1-1.46-1.1-1.46-.9-.6.07-.58.07-.58 1 .08 1.52 1.03 1.52 1.03.9 1.52 2.36 1.08 2.94.82.1-.65.36-1.08.65-1.33-2.22-.25-4.56-1.1-4.56-4.9 0-1.08.39-1.96 1.03-2.65-.1-.25-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.02A9.53 9.53 0 0112 6.84c.85.01 1.7.11 2.5.32 1.9-1.29 2.74-1.02 2.74-1.02.55 1.4.2 2.45.1 2.7.64.7 1.03 1.57 1.03 2.65 0 3.82-2.34 4.65-4.58 4.9.38.33.7.97.7 1.95v2.88c0 .27.18.58.7.48A10.01 10.01 0 0012 2z"/>
+                </svg>
+                Sign in with GitHub
+            </a>
+        </div>
+    </div>
+</body>
+</html>

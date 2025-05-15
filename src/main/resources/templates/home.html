@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-overlay">
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="/home" class="nav-link">Home</a>
+                <a href="/main" class="nav-link">Main User</a>
+                <a href="/rest" class="nav-link">Rest Operation</a>
+            </div>
+            <div class="nav-right">
+                <form th:action="@{/logout}" method="post">
+                    <button type="submit" class="logout-button">Logout</button>
+                </form>
+            </div>
+        </nav>
+
+        <div class="content">
+            <h1 th:text="${message}">Welcome to the Application</h1>
+        </div>
+    </div>
+</body>
+</html>
