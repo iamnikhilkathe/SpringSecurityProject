@@ -1,11 +1,21 @@
 package com.project.spring.controllers;
 
-import org.springframework.http.HttpRequest;
+import java.io.File;
+import java.net.MalformedURLException;
+import java.nio.file.Path;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.UrlResource;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import jakarta.servlet.http.HttpServletRequest;
 
@@ -30,4 +40,12 @@ public class DefaultController {
 	        return "home";
 	    }
 	
+	
+	    private String videoDirectory="C:\\Users\\Administrator\\Downloads\\videosSuits\\";
+
+	    @GetMapping("/files")
+	    public String listVideos() {
+	        // future code is coming here
+	        return "files";
+	    }
 }
